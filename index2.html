@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="stilus2.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var txtElement = document.querySelector('.txt');
+            var outcomes = ["Nyertél!", "Vesztettél!", "Döntetlen"];
+
+            function updateContent() {
+                var randomIndex = Math.floor(Math.random() * outcomes.length);
+                txtElement.textContent = outcomes[randomIndex];
+            }
+
+            // Call the function to set initial content
+            updateContent();
+
+            // Optionally, you can add an event listener to trigger the update on user interaction or other events
+            // Example: txtElement.addEventListener('click', updateContent);
+        });
+    </script>
+</head>
+<body>
+    <div class="txt" contenteditable="true">
+        <!-- Initial content will be set by JavaScript -->
+    </div>
+</body>
+</html>
